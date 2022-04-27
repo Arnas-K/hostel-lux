@@ -1,6 +1,11 @@
 import React from "react";
+import carousel1 from "./images/slide/[1]_hostellux_01.jpg";
+import carousel2 from "./images/slide/[1]_hostellux_02.jpg";
+import sampleImage from "./images/sample.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
-// components
+import EuroIcon from "@mui/icons-material/Euro";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function App() {
   return (
@@ -113,16 +118,9 @@ export default function App() {
                   Kambariai
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                  Kambariuose gali apsigyventi nuo 1 iki 3 žmonių.
                 </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
-                </p>
+                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -157,7 +155,7 @@ export default function App() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
                   <img
                     alt="..."
-                    src="http://cdn.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg"
+                    src={sampleImage}
                     className="w-full align-middle rounded-t-lg"
                   />
                   <blockquote className="relative p-8 mb-4">
@@ -216,11 +214,14 @@ export default function App() {
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-                  <img
-                    alt="..."
-                    src="http://cdn.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg"
-                    className="w-full align-middle rounded-t-lg"
-                  />
+                  <Carousel>
+                    <div>
+                      <img src={carousel1} alt="googoogaga" />
+                    </div>
+                    <div>
+                      <img src={carousel2} alt="awooga" />
+                    </div>
+                  </Carousel>
                   <blockquote className="relative p-8 mb-4">
                     <svg
                       preserveAspectRatio="none"
@@ -274,7 +275,7 @@ export default function App() {
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
-                    <i className="fas fa-rocket text-xl"></i>
+                    <EuroIcon color="primary" />
                   </div>
                   <h3 className="text-3xl font-semibold">Kainos</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
@@ -413,75 +414,6 @@ export default function App() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Want to work with us?
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
-                    </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        rows="4"
-                        cols="80"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
