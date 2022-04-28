@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
+import sampleImage from "./images/sample.jpg";
 
 export default function App() {
   return (
@@ -17,8 +18,7 @@ export default function App() {
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage:
-                "url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/1a/ea/54/hotel-presidente-4s.jpg?w=1400&h=-1&s=1)",
+              backgroundImage: `url(${sampleImage})`,
             }}
           >
             <span
@@ -92,7 +92,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center mt-32">
+            <div id="kambariai" className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <ChairIcon />
@@ -200,7 +200,7 @@ export default function App() {
           </div>
 
           <div className="container mx-auto px-4">
-            <div className="items-center flex flex-wrap">
+            <div id="kainos" className="items-center flex flex-wrap">
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
@@ -262,7 +262,9 @@ export default function App() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Kontaktai</h2>
+                <h2 id="kontaktai" className="text-4xl font-semibold">
+                  Kontaktai
+                </h2>
                 <p className="text-2xl leading-relaxed m-4 text-blue-500">
                   <a href="tel:+370 696 02030"> +370 696 02030 </a>
                 </p>
