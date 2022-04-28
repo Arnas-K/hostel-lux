@@ -1,16 +1,17 @@
 import React from "react";
 import carousel1 from "./images/slide/[1]_hostellux_01.jpg";
 import carousel2 from "./images/slide/[1]_hostellux_02.jpg";
-import sampleImage from "./images/sample.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
 import EuroIcon from "@mui/icons-material/Euro";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import FloatyBoy from "./components/FloatyBoys.js";
+import Navbar from "./components/Navbar.js";
 
 export default function App() {
   return (
     <>
-      {/* <Navbar transparent /> */}
+      <Navbar />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
@@ -65,40 +66,28 @@ export default function App() {
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <i className="fas fa-award"></i>
-                    <h6 className="text-xl font-semibold">
-                      Vieta Kauno centre
-                    </h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Hostelis yra įsikūręs pačiame Kauno centre, Laisvės
-                      alėjoje.
-                    </p>
-                  </div>
+                  <FloatyBoy
+                    title="Vieta Kauno centre"
+                    content="Hostelis yra įsikūręs pačiame Kauno centre, Laisvės alėjoje."
+                  />
                 </div>
               </div>
 
               <div className="w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-xl font-semibold">Prieinama kaina</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Kambarių kaina nuo 19EUR
-                    </p>
-                  </div>
+                  <FloatyBoy
+                    title="Prieinama kaina"
+                    content="Kambarių kaina nuo 19EUR"
+                  />
                 </div>
               </div>
 
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-xl font-semibold">
-                      Privatūs kambariai
-                    </h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Kambaryje negyvensite su nepažįstamais žmonėmis
-                    </p>
-                  </div>
+                  <FloatyBoy
+                    title="Privatūs kambariai"
+                    content="Kambaryje negyvensite su nepažįstamais žmonėmis"
+                  />
                 </div>
               </div>
             </div>
@@ -137,72 +126,13 @@ export default function App() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 583 95"
                       className="absolute left-0 w-full block h-95-px -top-94-px"
-                    ></svg>
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      className="text-blueGray-700 fill-current"
-                    ></polygon>
+                    >
+                      <polygon
+                        points="-30,95 583,95 583,65"
+                        className="text-blueGray-700 fill-current"
+                      ></polygon>
+                    </svg>
                     <h4 className="text-xl font-bold text-white">Come on In</h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens. Unless...
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-                  <img
-                    alt="..."
-                    src={sampleImage}
-                    className="w-full align-middle rounded-t-lg"
-                  />
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-blueGray-700 fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                      Kambarys Nr. 3
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens. Unless...
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-                  <img
-                    alt="..."
-                    src="http://cdn.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg"
-                    className="w-full align-middle rounded-t-lg"
-                  />
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-blueGray-700 fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                      Top Notch Services
-                    </h4>
                     <p className="text-md font-light mt-2 text-white">
                       The Arctic Ocean freezes every winter and much of the
                       sea-ice then thaws every summer, and that process will
@@ -238,9 +168,8 @@ export default function App() {
                       Another One
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens. Unless...
+                      Patys geriausi kambariai Kaune Kauno centre Kaunas maža
+                      kaina Kaunas nakvynė Kauno centre pigi nakvynė Kaune
                     </p>
                   </blockquote>
                 </div>
@@ -334,11 +263,17 @@ export default function App() {
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Kontaktai</h2>
-                <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                <p className="text-2xl leading-relaxed m-4 text-blue-500">
+                  <a href="tel:+370 696 02030"> +370 696 02030 </a>
                 </p>
+                {/* <iframe
+                  SameSite="Strict"
+                  className="w-full h-full"
+                  title="Hostelio lokacija"
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAzLs8w8yWYOAk48IhJAA9Vw1USlkCTYro
+    &q=Hostel+Lux, Kaunas"
+                ></iframe> */}
+                Map goes here bubba
               </div>
             </div>
           </div>
