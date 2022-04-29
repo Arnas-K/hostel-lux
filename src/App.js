@@ -8,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
 import sampleImage from "./images/sample.jpg";
+import Pricing from "./components/Pricing.js";
 
 export default function App() {
   return (
@@ -65,30 +66,22 @@ export default function App() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <FloatyBoy
-                    title="Vieta Kauno centre"
-                    content="Hostelis yra įsikūręs pačiame Kauno centre, Laisvės alėjoje."
-                  />
-                </div>
+                <FloatyBoy
+                  title="Vieta Kauno centre"
+                  content="Hostelis yra įsikūręs pačiame Kauno centre, Laisvės alėjoje."
+                />
               </div>
-
-              <div className="w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <FloatyBoy
-                    title="Prieinama kaina"
-                    content="Kambarių kaina nuo 19EUR"
-                  />
-                </div>
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <FloatyBoy
+                  title="Prieinama kaina"
+                  content="Kambarių kaina nuo 19EUR"
+                />
               </div>
-
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <FloatyBoy
-                    title="Privatūs kambariai"
-                    content="Kambaryje negyvensite su nepažįstamais žmonėmis"
-                  />
-                </div>
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <FloatyBoy
+                  title="Privatūs kambariai"
+                  content="Kambaryje negyvensite su nepažįstamais žmonėmis"
+                />
               </div>
             </div>
 
@@ -112,37 +105,7 @@ export default function App() {
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-                  <img
-                    alt="..."
-                    src="https://i.kym-cdn.com/entries/icons/original/000/021/290/bounsa.png"
-                    className="w-full align-middle rounded-t-lg"
-                  />
-
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-blueGray-700 fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">Come on In</h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens. Unless...
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div classNaame="w-full md:w-9/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
                   <Carousel>
                     <div>
@@ -201,70 +164,23 @@ export default function App() {
 
           <div className="container mx-auto px-4">
             <div id="kainos" className="items-center flex flex-wrap">
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <EuroIcon color="primary" />
                   </div>
-                  <h3 className="text-3xl font-semibold">Kainos</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    Geriausios kainos Kaune sheesh
-                  </p>
-                  <ul className="list-none mt-6">
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fas fa-fingerprint"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-blueGray-500">1 asmuo - 19EUR</h4>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fab fa-html5"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-blueGray-500">
-                            2 asmenys - 25EUR
-                          </h4>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="far fa-paper-plane"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-blueGray-500">
-                            3 asmenys - 100 EUR 😬
-                          </h4>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                  <Pricing />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="pt-20 pb-48">
+        <section id="kontaktai" className="pt-20 pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 id="kontaktai" className="text-4xl font-semibold">
-                  Kontaktai
-                </h2>
+                <h2 className="text-4xl font-semibold">Kontaktai</h2>
                 <p className="text-2xl leading-relaxed m-4 text-blue-500">
                   <a href="tel:+370 696 02030"> +370 696 02030 </a>
                 </p>

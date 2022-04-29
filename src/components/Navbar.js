@@ -14,7 +14,7 @@ export default function Navbar(props) {
       <nav className="navbar">
         <div className="nav-container">
           <a href="#" className="nav-logo">
-            Bruh gaming
+            Hostel Lux
           </a>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
