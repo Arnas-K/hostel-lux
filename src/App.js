@@ -9,8 +9,10 @@ import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
 import sampleImage from "./images/sample.jpg";
 import Pricing from "./components/Pricing.js";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function App() {
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -35,7 +37,7 @@ export default function App() {
                     Hostel Lux
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    Puiki vieta nakvynei Kauno centre
+                    {t("description.part1")}
                   </p>
                 </div>
               </div>
@@ -184,14 +186,13 @@ export default function App() {
                 <p className="text-2xl leading-relaxed m-4 text-blue-500">
                   <a href="tel:+370 696 02030"> +370 696 02030 </a>
                 </p>
-                {/* <iframe
+                <iframe
                   SameSite="Strict"
                   className="w-full h-full"
                   title="Hostelio lokacija"
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAzLs8w8yWYOAk48IhJAA9Vw1USlkCTYro
     &q=Hostel+Lux, Kaunas"
-                ></iframe> */}
-                Map goes here bubba
+                ></iframe>
               </div>
             </div>
           </div>
@@ -217,62 +218,8 @@ export default function App() {
               ></polygon>
             </svg>
           </div>
-
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div className="flex flex-wrap text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold text-white">
-                  Build something
-                </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
-                </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
-                  Excelent Services
-                </h6>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl"></i>
-                </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Grow your market
-                </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
-                </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Launch time
-                </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div>
         </section>
       </main>
-      {/* <Footer /> */}
     </>
   );
 }

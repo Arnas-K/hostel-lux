@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from "../images/le.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 // components
