@@ -9,10 +9,10 @@ import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
 import sampleImage from "./images/sample.jpg";
 import Pricing from "./components/Pricing.js";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Navbar />
@@ -98,6 +98,7 @@ export default function App() {
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
                 </div>
+                {/* TODO: Kambariai: Simplas, double, advanced, triple  */}
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   Kambariai
                 </h3>
@@ -130,11 +131,10 @@ export default function App() {
                       ></polygon>
                     </svg>
                     <h4 className="text-xl font-bold text-white">
-                      Another One
+                      Kambarių nuotraukos
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                      Patys geriausi kambariai Kaune Kauno centre Kaunas maža
-                      kaina Kaunas nakvynė Kauno centre pigi nakvynė Kaune
+                      Kambariai su visais patogumais
                     </p>
                   </blockquote>
                 </div>
@@ -182,6 +182,9 @@ export default function App() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
+                {/* TODO: Viber, Whatsapp prie telefono
+                TODO: Uzsakyti vietoj kontaktu
+                TODO: Kaip mus rasti sekcija */}
                 <h2 className="text-4xl font-semibold">Kontaktai</h2>
                 <p className="text-2xl leading-relaxed m-4 text-blue-500">
                   <a href="tel:+370 696 02030"> +370 696 02030 </a>

@@ -20,7 +20,12 @@ i18n
       en: {
         translation: {
           description: {
-            part1: "Best place in Kaunas centre Kaunas Kaunas (cheap)",
+            part1: "Best place to stay in Kaunas centre",
+          },
+          navbar: {
+            rooms: "Rooms",
+            prices: "Prices",
+            contacts: "Contacts",
           },
           // here we will place our translations...
         },
@@ -30,6 +35,11 @@ i18n
         translation: {
           description: {
             part1: "Geriausia vieta nakvynei Kauno centre",
+          },
+          navbar: {
+            rooms: "Kambariai",
+            prices: "Kainos",
+            contacts: "Kontaktai",
           },
         },
       },
