@@ -7,8 +7,8 @@ import lithuanianFlag from "../images/flags/lithuanian.png";
 import ukFlag from "../images/flags/english.png";
 
 const lngs = {
-  en: { icon: lithuanianFlag },
-  lt: { icon: ukFlag },
+  lt: { icon: lithuanianFlag },
+  en: { icon: ukFlag },
 };
 
 export default function Navbar() {
@@ -23,6 +23,7 @@ export default function Navbar() {
           <a href="#" className="nav-logo">
             Hostel Lux
           </a>
+          {/* Language selector */}
           <div>
             {Object.keys(lngs).map((lng) => (
               <button
@@ -39,6 +40,7 @@ export default function Navbar() {
               </button>
             ))}
           </div>
+          {/* Main navigation menu */}
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <a href="#kambariai" className="nav-links" onClick={handleClick}>
@@ -53,6 +55,11 @@ export default function Navbar() {
             <li className="nav-item">
               <a href="#kontaktai" className="nav-links" onClick={handleClick}>
                 {t("navbar.contacts")}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#kaip-rasti" className="nav-links" onClick={handleClick}>
+                {t("navbar.location")}
               </a>
             </li>
           </ul>

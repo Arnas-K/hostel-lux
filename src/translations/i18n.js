@@ -26,6 +26,7 @@ i18n
             rooms: "Rooms",
             prices: "Prices",
             contacts: "Contacts",
+            location: "How to find us",
           },
           // here we will place our translations...
         },
@@ -40,6 +41,7 @@ i18n
             rooms: "Kambariai",
             prices: "Kainos",
             contacts: "Kontaktai",
+            location: "Kaip mus rasti",
           },
         },
       },

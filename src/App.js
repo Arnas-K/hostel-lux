@@ -2,14 +2,17 @@ import React from "react";
 import carousel1 from "./images/slide/[1]_hostellux_01.jpg";
 import carousel2 from "./images/slide/[1]_hostellux_02.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
-import EuroIcon from "@mui/icons-material/Euro";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
-import sampleImage from "./images/sample.jpg";
+import sampleImage from "./images/slide/hostellux_02.jpg";
 import Pricing from "./components/Pricing.js";
+import whatsappIcon from "./images/icons/whatsapp.png";
+import viberIcon from "./images/icons/viber.png";
 import { useTranslation } from "react-i18next";
+import entranceImage from "./images/Entrance.jpg";
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -76,7 +79,7 @@ export default function App() {
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <FloatyBoy
                   title="Prieinama kaina"
-                  content="Kambarių kaina nuo 19EUR"
+                  content="Kambarių kaina nuo 20EUR"
                 />
               </div>
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -98,7 +101,7 @@ export default function App() {
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
                 </div>
-                {/* TODO: Kambariai: Simplas, double, advanced, triple  */}
+                {/* TODO: prideti Simplas, double, advanced (deluxe), triple  */}
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   Kambariai
                 </h3>
@@ -168,27 +171,66 @@ export default function App() {
             <div id="kainos" className="items-center flex flex-wrap">
               <div className="w-full ml-auto mr-auto px-4">
                 <div className="md:pr-12">
-                  <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
-                    <EuroIcon color="primary" />
-                  </div>
                   <Pricing />
                 </div>
               </div>
             </div>
           </div>
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              className="text-blueGray-200 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
         </section>
 
-        <section id="kontaktai" className="pt-20 pb-48">
+        <section
+          id="kontaktai"
+          className="relative pt-10 pb-40 bg-blueGray-200"
+        >
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                {/* TODO: Viber, Whatsapp prie telefono
-                TODO: Uzsakyti vietoj kontaktu
-                TODO: Kaip mus rasti sekcija */}
-                <h2 className="text-4xl font-semibold">Kontaktai</h2>
-                <p className="text-2xl leading-relaxed m-4 text-blue-500">
-                  <a href="tel:+370 696 02030"> +370 696 02030 </a>
-                </p>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white">
+                  <LocalPhoneIcon />
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    className="absolute left-0 w-full block h-95-px -top-94-px"
+                  ></svg>
+                </div>
+                <div className="flex justify-center gap-3 items-center items-stretch m-4">
+                  <div className="self-center text-4xl text-blue-500">
+                    <a href="tel:+370 696 02030"> +37069602030 </a>
+                  </div>
+                  <div className="shrink">
+                    <a
+                      href="https://wa.me/0037069602030"
+                      target="_blank"
+                      alt="whatsapp link"
+                    >
+                      <img src={whatsappIcon} />
+                    </a>
+                  </div>
+                  <div className="shrink">
+                    <a
+                      href="https://msng.link/o/?0037069602030=vi"
+                      target="_blank"
+                      alt="viber link"
+                    >
+                      <img src={viberIcon} />
+                    </a>
+                  </div>
+                </div>
                 <iframe
                   SameSite="Strict"
                   className="w-full h-full"
@@ -197,6 +239,38 @@ export default function App() {
     &q=Hostel+Lux, Kaunas"
                 ></iframe>
               </div>
+            </div>
+          </div>
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              className="text-white fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </section>
+
+        <section id="kaip-rasti" className="pt-20 pb-48">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center text-center mb-24">
+              <div className="w-full lg:w-6/12 px-4">
+                <h2 className="text-4xl font-semibold">Kaip mus rasti</h2>
+                Atvykstant automobiliu mašiną palikite A.Mickevičiaus gatvėje,
+                arčiau Laisvės al. Parkavimas mokamas ( I-V nuo 8 val. iki 20
+                val. 2,00 EUR/val.) Eikite Laisvės alėja nuo A.Mickevičiaus
+                gatvės link S.Daukanto gatvės (soboras lieka už nugaros). Už 60
+                m, dešinėje pusėje yra įėjimas į kiemą (broma), eikte į jį.
+                Pačiame įėjime, kairėje rudos durys, užeikite pro jas ir
+                pakilkite į antrą aukštą.
+              </div>
+              <img src={entranceImage} style={{ maxHeight: "500px" }} />
             </div>
           </div>
         </section>
