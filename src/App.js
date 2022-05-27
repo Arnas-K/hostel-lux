@@ -1,10 +1,15 @@
 import React from "react";
-import carousel1 from "./images/slide/[1]_hostellux_01.jpg";
-import carousel2 from "./images/slide/[1]_hostellux_02.jpg";
+import deluxe_twin_pic1 from "./images/rooms/deluxe_twin/room.jpg";
+import deluxe_twin_pic2 from "./images/rooms/deluxe_twin/room_2.jpg";
+import simple_twin_pic1 from "./images/rooms/simple_twin/room.jpg";
+import simple_twin_pic2 from "./images/rooms/simple_twin/room.jpg";
+import double_room_pic1 from "./images/rooms/Double/room.jpg";
+import double_room_pic2 from "./images/rooms/Double/room.jpg";
+import triple_room_pic1 from "./images/rooms/Triple/room.jpg";
+import triple_room_pic2 from "./images/rooms/Triple/room_2.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import FloatyBoy from "./components/FloatyBoys.js";
 import Navbar from "./components/Navbar.js";
 import sampleImage from "./images/slide/hostellux_02.jpg";
@@ -13,9 +18,10 @@ import whatsappIcon from "./images/icons/whatsapp.png";
 import viberIcon from "./images/icons/viber.png";
 import { useTranslation } from "react-i18next";
 import entranceImage from "./images/Entrance.jpg";
+import RoomCarousel from "./components/RoomCarousel.js";
 
 export default function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -101,7 +107,6 @@ export default function App() {
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
                 </div>
-                {/* TODO: prideti Simplas, double, advanced (deluxe), triple  */}
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   Kambariai
                 </h3>
@@ -110,37 +115,29 @@ export default function App() {
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
               </div>
-
-              <div classNaame="w-full md:w-9/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-                  <Carousel>
-                    <div>
-                      <img src={carousel1} alt="googoogaga" />
-                    </div>
-                    <div>
-                      <img src={carousel2} alt="awooga" />
-                    </div>
-                  </Carousel>
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-blueGray-700 fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                      Kambarių nuotraukos
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      Kambariai su visais patogumais
-                    </p>
-                  </blockquote>
-                </div>
+              <div className="flex px-4 mx-auto">
+                <RoomCarousel
+                  roomPicture={[simple_twin_pic1, simple_twin_pic2]}
+                  title="Dviejų lovų numeris"
+                  description="Šiame dviejų lovų numeryje yra elektrinis virdulys, skrudintuvas ir mikrobangų krosnelė."
+                />
+                <RoomCarousel
+                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic2]}
+                  title="Ištaigingas dviejų lovų numeris"
+                  description="Šiame numeryje grindys išklotos kilimine danga, yra stalas su kėdėmis. Vonios kambarys - bendras."
+                />
+              </div>
+              <div className="flex px-4 mx-auto">
+                <RoomCarousel
+                  roomPicture={[double_room_pic1, double_room_pic2]}
+                  title="Dvivietis numeris"
+                  description="Šiame klasikinio stiliaus numeryje su aukštomis lubomis pastatytas stalas su kėdėmis, o pro langus atsiveria Laisvės alėjos vaizdai. Vonios kambariu dalinasi dviejų numerių svečiai. Numeryje galima pristatyti papildomą lovą."
+                />
+                <RoomCarousel
+                  roomPicture={[triple_room_pic1, triple_room_pic2]}
+                  title="Trivietis numeris"
+                  description="Šiame numeryje su kilimine danga išklotomis grindimis pastatytas stalas su kėdėmis. Koridoriuje įrengtu vonios kambariu naudojasi dar vieno triviečio numerio svečiai."
+                />
               </div>
             </div>
           </div>
@@ -216,18 +213,20 @@ export default function App() {
                     <a
                       href="https://wa.me/0037069602030"
                       target="_blank"
+                      rel="noreferrer"
                       alt="whatsapp link"
                     >
-                      <img src={whatsappIcon} />
+                      <img src={whatsappIcon} alt="Whatsapp" />
                     </a>
                   </div>
                   <div className="shrink">
                     <a
                       href="https://msng.link/o/?0037069602030=vi"
                       target="_blank"
+                      rel="noreferrer"
                       alt="viber link"
                     >
-                      <img src={viberIcon} />
+                      <img src={viberIcon} alt="Viber" />
                     </a>
                   </div>
                 </div>
@@ -270,7 +269,11 @@ export default function App() {
                 Pačiame įėjime, kairėje rudos durys, užeikite pro jas ir
                 pakilkite į antrą aukštą.
               </div>
-              <img src={entranceImage} style={{ maxHeight: "500px" }} />
+              <img
+                src={entranceImage}
+                alt="entrance"
+                style={{ maxHeight: "500px" }}
+              />
             </div>
           </div>
         </section>
