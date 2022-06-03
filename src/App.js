@@ -4,7 +4,7 @@ import deluxe_twin_pic2 from "./images/rooms/deluxe_twin/room_2.jpg";
 import simple_twin_pic1 from "./images/rooms/simple_twin/room.jpg";
 import simple_twin_pic2 from "./images/rooms/simple_twin/room.jpg";
 import double_room_pic1 from "./images/rooms/Double/room.jpg";
-import double_room_pic2 from "./images/rooms/Double/room.jpg";
+import double_room_pic2 from "./images/rooms/Double/shower.jpg";
 import triple_room_pic1 from "./images/rooms/Triple/room.jpg";
 import triple_room_pic2 from "./images/rooms/Triple/room_2.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
@@ -41,7 +41,7 @@ export default function App() {
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
+                <div>
                   <h1 className="text-white font-semibold text-5xl">
                     Hostel Lux
                   </h1>
@@ -115,19 +115,19 @@ export default function App() {
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
               </div>
-              <div className="flex px-4 mx-auto">
+              <div className="flex flex-col md:flex-row px-4 mx-auto">
                 <RoomCarousel
-                  roomPicture={[simple_twin_pic1, simple_twin_pic2]}
+                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic1]}
                   title="Dviejų lovų numeris"
                   description="Šiame dviejų lovų numeryje yra elektrinis virdulys, skrudintuvas ir mikrobangų krosnelė."
                 />
                 <RoomCarousel
-                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic2]}
+                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic1]}
                   title="Ištaigingas dviejų lovų numeris"
                   description="Šiame numeryje grindys išklotos kilimine danga, yra stalas su kėdėmis. Vonios kambarys - bendras."
                 />
               </div>
-              <div className="flex px-4 mx-auto">
+              <div className="flex flex-col md:flex-row px-4 mx-auto">
                 <RoomCarousel
                   roomPicture={[double_room_pic1, double_room_pic2]}
                   title="Dvivietis numeris"
@@ -260,19 +260,21 @@ export default function App() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Kaip mus rasti</h2>
-                Atvykstant automobiliu mašiną palikite A.Mickevičiaus gatvėje,
+                <FloatyBoy
+                  title="Kaip mus rasti"
+                  content="Atvykstant automobiliu mašiną palikite A.Mickevičiaus gatvėje,
                 arčiau Laisvės al. Parkavimas mokamas ( I-V nuo 8 val. iki 20
                 val. 2,00 EUR/val.) Eikite Laisvės alėja nuo A.Mickevičiaus
                 gatvės link S.Daukanto gatvės (soboras lieka už nugaros). Už 60
                 m, dešinėje pusėje yra įėjimas į kiemą (broma), eikte į jį.
                 Pačiame įėjime, kairėje rudos durys, užeikite pro jas ir
-                pakilkite į antrą aukštą.
+                pakilkite į antrą aukštą."
+                />
               </div>
               <img
                 src={entranceImage}
                 alt="entrance"
-                style={{ maxHeight: "500px" }}
+                style={{ maxHeight: "500px", borderRadius: "10%" }}
               />
             </div>
           </div>

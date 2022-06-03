@@ -3,8 +3,8 @@ import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "react-i18next";
-import lithuanianFlag from "../images/flags/lithuanian.png";
-import ukFlag from "../images/flags/english.png";
+import lithuanianFlag from "../images/icons/lithuanian.png";
+import ukFlag from "../images/icons/english.png";
 
 const lngs = {
   lt: { icon: lithuanianFlag },
@@ -24,7 +24,7 @@ export default function Navbar() {
             Hostel Lux
           </a>
           {/* Language selector */}
-          <div>
+          <div className="nav-language-flags">
             {Object.keys(lngs).map((lng) => (
               <button
                 key={lng}

@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 export default function RoomCarousel({ roomPicture, title, description }) {
   return (
     <div className="relative mx-4 bg-white mb-6 shadow-lg rounded-lg bg-blueGray-700">
-      <Carousel>
+      <Carousel dynamicHeight={true} swipeable>
         {roomPicture.map((image) => (
           <div>
             <img src={image} alt="Picture of a room" />
