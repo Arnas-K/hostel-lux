@@ -12,26 +12,27 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
-
-const tiers = [
-  {
-    title: "1 asmuo",
-    price: "20",
-    description: ["už naktį"],
-  },
-  {
-    title: "2 asmenys",
-    price: "25",
-    description: ["už naktį"],
-  },
-  {
-    title: "3 asmenys",
-    price: "36",
-    description: ["už naktį"],
-  },
-];
+import { useTranslation } from "react-i18next";
 
 function PricingContent() {
+  const { t } = useTranslation();
+  const tiers = [
+    {
+      title: t("sectionContent.sectionDescription.onePersonPrice"),
+      price: "20",
+      description: [t("sectionContent.sectionDescription.forOneNight")],
+    },
+    {
+      title: t("sectionContent.sectionDescription.twoPersonPrice"),
+      price: "25",
+      description: [t("sectionContent.sectionDescription.forOneNight")],
+    },
+    {
+      title: t("sectionContent.sectionDescription.threePersonPrice"),
+      price: "36",
+      description: [t("sectionContent.sectionDescription.forOneNight")],
+    },
+  ];
   return (
     <React.Fragment>
       <GlobalStyles
@@ -63,7 +64,7 @@ function PricingContent() {
           color="text.primary"
           gutterBottom
         >
-          Kainos
+          {t("sectionContent.sectionTitles.prices")}
         </Typography>
         <Typography
           variant="h5"
@@ -71,7 +72,7 @@ function PricingContent() {
           color="text.secondary"
           component="p"
         >
-          Geriausios kainos Kaune
+          {t("sectionContent.sectionDescription.pricesDescription")}
         </Typography>
       </Container>
       {/* End hero unit */}

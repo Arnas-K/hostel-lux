@@ -1,12 +1,24 @@
 import React from "react";
 import deluxe_twin_pic1 from "./images/rooms/deluxe_twin/room.jpg";
 import deluxe_twin_pic2 from "./images/rooms/deluxe_twin/room_2.jpg";
+import deluxe_twin_pic3 from "./images/rooms/deluxe_twin/kitchenette.jpg";
+import deluxe_twin_pic4 from "./images/rooms/deluxe_twin/kitchenette_2.jpg";
+import deluxe_twin_pic5 from "./images/rooms/deluxe_twin/hallway.jpg";
+import deluxe_twin_pic6 from "./images/rooms/deluxe_twin/shower.jpg";
 import simple_twin_pic1 from "./images/rooms/simple_twin/room.jpg";
-import simple_twin_pic2 from "./images/rooms/simple_twin/room.jpg";
+import simple_twin_pic2 from "./images/rooms/simple_twin/entrance.jpg";
+import simple_twin_pic3 from "./images/rooms/simple_twin/bathroom.jpg";
+import simple_twin_pic4 from "./images/rooms/simple_twin/bathroom_2.jpg";
+import simple_twin_pic5 from "./images/rooms/simple_twin/shower.jpg";
 import double_room_pic1 from "./images/rooms/Double/room.jpg";
-import double_room_pic2 from "./images/rooms/Double/shower.jpg";
+import double_room_pic2 from "./images/rooms/Double/hallway.jpg";
+import double_room_pic3 from "./images/rooms/Double/shower.jpg";
+import double_room_pic4 from "./images/rooms/Double/shower_2.jpg";
+import double_room_pic5 from "./images/rooms/Double/shower_3.jpg";
 import triple_room_pic1 from "./images/rooms/Triple/room.jpg";
 import triple_room_pic2 from "./images/rooms/Triple/room_2.jpg";
+import triple_room_pic3 from "./images/rooms/Triple/room_3.jpg";
+import triple_room_pic4 from "./images/rooms/Triple/room_4.jpg";
 import ChairIcon from "@mui/icons-material/Chair";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -19,6 +31,7 @@ import viberIcon from "./images/icons/viber.png";
 import { useTranslation } from "react-i18next";
 import entranceImage from "./images/Entrance.jpg";
 import RoomCarousel from "./components/RoomCarousel.js";
+import { maxHeight } from "@mui/system";
 
 export default function App() {
   const { t } = useTranslation();
@@ -78,20 +91,20 @@ export default function App() {
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <FloatyBoy
-                  title="Vieta Kauno centre"
-                  content="Hostelis yra įsikūręs pačiame Kauno centre, Laisvės alėjoje."
+                  title={t("floatingSection.title1")}
+                  content={t("floatingSection.description1")}
                 />
               </div>
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <FloatyBoy
-                  title="Prieinama kaina"
-                  content="Kambarių kaina nuo 20EUR"
+                  title={t("floatingSection.title2")}
+                  content={t("floatingSection.description2")}
                 />
               </div>
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <FloatyBoy
-                  title="Privatūs kambariai"
-                  content="Kambaryje negyvensite su nepažįstamais žmonėmis"
+                  title={t("floatingSection.title3")}
+                  content={t("floatingSection.description3")}
                 />
               </div>
             </div>
@@ -108,36 +121,68 @@ export default function App() {
                   ></svg>
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Kambariai
+                  {t("sectionContent.sectionTitles.rooms")}
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                  Kambariuose gali apsigyventi nuo 1 iki 3 žmonių.
+                  {t("sectionContent.sectionDescription.roomDescription")}
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
               </div>
-              <div className="flex flex-col md:flex-row px-4 mx-auto">
-                <RoomCarousel
-                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic1]}
-                  title="Dviejų lovų numeris"
-                  description="Šiame dviejų lovų numeryje yra elektrinis virdulys, skrudintuvas ir mikrobangų krosnelė."
-                />
-                <RoomCarousel
-                  roomPicture={[deluxe_twin_pic1, deluxe_twin_pic1]}
-                  title="Ištaigingas dviejų lovų numeris"
-                  description="Šiame numeryje grindys išklotos kilimine danga, yra stalas su kėdėmis. Vonios kambarys - bendras."
-                />
+              <div className="container flex flex-col md:flex-row px-4 mx-auto">
+                <div className="max-w-50-percent">
+                  <RoomCarousel
+                    roomPicture={[
+                      simple_twin_pic1,
+                      simple_twin_pic2,
+                      simple_twin_pic3,
+                      simple_twin_pic4,
+                      simple_twin_pic5,
+                    ]}
+                    title={t("roomContent.simpleTwinTitle")}
+                    description={t("roomContent.simpleTwinDescription")}
+                  />
+                </div>
+                <div className="max-w-50-percent">
+                  <RoomCarousel
+                    roomPicture={[
+                      deluxe_twin_pic1,
+                      deluxe_twin_pic2,
+                      deluxe_twin_pic3,
+                      deluxe_twin_pic4,
+                      deluxe_twin_pic5,
+                      deluxe_twin_pic6,
+                    ]}
+                    title={t("roomContent.deluxeTwinTitle")}
+                    description={t("roomContent.deluxeTwinDescription")}
+                  />
+                </div>
               </div>
-              <div className="flex flex-col md:flex-row px-4 mx-auto">
-                <RoomCarousel
-                  roomPicture={[double_room_pic1, double_room_pic2]}
-                  title="Dvivietis numeris"
-                  description="Šiame klasikinio stiliaus numeryje su aukštomis lubomis pastatytas stalas su kėdėmis, o pro langus atsiveria Laisvės alėjos vaizdai. Vonios kambariu dalinasi dviejų numerių svečiai. Numeryje galima pristatyti papildomą lovą."
-                />
-                <RoomCarousel
-                  roomPicture={[triple_room_pic1, triple_room_pic2]}
-                  title="Trivietis numeris"
-                  description="Šiame numeryje su kilimine danga išklotomis grindimis pastatytas stalas su kėdėmis. Koridoriuje įrengtu vonios kambariu naudojasi dar vieno triviečio numerio svečiai."
-                />
+              <div className="container flex flex-col md:flex-row px-4 mx-auto">
+                <div className="max-w-50-percent">
+                  <RoomCarousel
+                    roomPicture={[
+                      double_room_pic1,
+                      double_room_pic2,
+                      double_room_pic3,
+                      double_room_pic4,
+                      double_room_pic5,
+                    ]}
+                    title={t("roomContent.doubleRoomTitle")}
+                    description={t("roomContent.doubleRoomDescription")}
+                  />
+                </div>
+                <div className="max-w-50-percent">
+                  <RoomCarousel
+                    roomPicture={[
+                      triple_room_pic1,
+                      triple_room_pic2,
+                      triple_room_pic3,
+                      triple_room_pic4,
+                    ]}
+                    title={t("roomContent.tripleRoomTitle")}
+                    description={t("roomContent.tripleRoomDescription")}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -205,11 +250,13 @@ export default function App() {
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
                 </div>
-                <div className="flex justify-center gap-3 items-center items-stretch m-4">
-                  <div className="self-center text-4xl text-blue-500">
+                <div className="flex justify-center gap-3 items-center m-4">
+                  <div className="text-2xl md:text-4xl text-blue-500">
+                    {/* TODO: didesni zenkliukai */}
+                    {/* TODO: support viewport of 360 icons*/}
                     <a href="tel:+370 696 02030"> +37069602030 </a>
                   </div>
-                  <div className="shrink">
+                  <div>
                     <a
                       href="https://wa.me/0037069602030"
                       target="_blank"
@@ -219,7 +266,7 @@ export default function App() {
                       <img src={whatsappIcon} alt="Whatsapp" />
                     </a>
                   </div>
-                  <div className="shrink">
+                  <div>
                     <a
                       href="https://msng.link/o/?0037069602030=vi"
                       target="_blank"
@@ -261,14 +308,10 @@ export default function App() {
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <FloatyBoy
-                  title="Kaip mus rasti"
-                  content="Atvykstant automobiliu mašiną palikite A.Mickevičiaus gatvėje,
-                arčiau Laisvės al. Parkavimas mokamas ( I-V nuo 8 val. iki 20
-                val. 2,00 EUR/val.) Eikite Laisvės alėja nuo A.Mickevičiaus
-                gatvės link S.Daukanto gatvės (soboras lieka už nugaros). Už 60
-                m, dešinėje pusėje yra įėjimas į kiemą (broma), eikte į jį.
-                Pačiame įėjime, kairėje rudos durys, užeikite pro jas ir
-                pakilkite į antrą aukštą."
+                  title={t("sectionContent.sectionTitles.howToFindUs")}
+                  content={t(
+                    "sectionContent.sectionDescription.howToFindUsDescription"
+                  )}
                 />
               </div>
               <img

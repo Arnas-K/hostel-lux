@@ -29,9 +29,9 @@ export default function Navbar() {
               <button
                 key={lng}
                 style={{
-                  margin: "0.75em",
-                  maxHeight: "50px",
-                  maxWidth: "50px",
+                  margin: "0.5em",
+                  maxHeight: "45px",
+                  maxWidth: "45px",
                 }}
                 type="submit"
                 onClick={() => i18n.changeLanguage(lng)}

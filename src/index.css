@@ -5,3 +5,8 @@
 html {
     scroll-padding-top: 100px;
 }
+@media (min-width: 1024px) {
+    .max-w-50-percent {
+        max-width: 50%;
+    }
+}
