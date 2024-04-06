@@ -1,1 +1,1 @@
-Website hosted on https://dev5375.dtno805160455.amplifyapp.com/
+Website hosted on AWS Amplify - https://dev5375.dtno805160455.amplifyapp.com/
